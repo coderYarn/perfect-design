@@ -1,0 +1,12 @@
+declare module 'react-dom'
+declare module 'react'
+declare module 'react-transition-group'
+declare module 'perfectMap'
+declare const AMap
+declare module '*.svg'
+declare module '*.png'
+declare module '*.jpg'
+declare module '*.jpeg'
+declare module '*.gif'
+declare module '*.bmp'
+declare module '*.tiff'
