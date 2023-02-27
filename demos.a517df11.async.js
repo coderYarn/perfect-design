@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkperfect_map=self.webpackChunkperfect_map||[]).push([[433],{63261:function(c,r,n){n.r(r),n.d(r,{default:function(){return u}});var s=n(36047),t=n(17210);function e(){return(0,t.jsx)("h1",{children:"Alert"})}var u=function(){return(0,t.jsxs)("div",{children:[(0,t.jsx)(e,{}),(0,t.jsx)(e,{}),(0,t.jsx)(e,{})]})}}}]);
