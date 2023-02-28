@@ -1,4 +1,4 @@
-import Map, { MapContext } from './Map'
+import { Map } from './Map'
 
-export { MapContext }
+
 export default Map

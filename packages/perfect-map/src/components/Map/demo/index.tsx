@@ -1,11 +1,17 @@
 import React, { useRef } from 'react'
-import { Map, MapKey, Marker } from 'perfectMap'
+import { Map, MapKey, Marker, APILoader } from 'perfectMap'
 import Punctuation from '../../assets/punctuation.svg'
 import ActivePun from '../../assets/activePun.svg'
 import GreenPun from '../../assets/greenPun.svg'
+import { useMap } from '../useMap'
+import { useState } from 'react'
 
 function App() {
-	const ref = useRef<any>(null)
+	const warpper = useRef<any>(null)
+	const [center, setCenter] = useState([116.397428, 39.90923])
+	const { setContainer } = useMap({
+		container: warpper.current
+	})
 
 	const lnglats = [
 		{
@@ -38,30 +44,13 @@ function App() {
 	}
 	const removeMarker = () => {
 		// ref.current.removeMarker('blue')
-		console.log(ref.current.map.current.getCenter())
-		ref.current.map.current.setCenter([113.397694, 22.514927])
 	}
 	return (
 		<div style={{ height: '300px', width: '750px' }}>
 			<button onClick={removeMarker}>+</button>
-			<MapKey mapKey={'c72061ac3536c85210f74ae2aa07f004'}>
-				<Map ref={ref as any}>
-					{lnglats.map((item) => {
-						return (
-							<Marker
-								onClick={onClick}
-								key={item.title}
-								title={item.title}
-								position={item.position}
-								activeIcon={ActivePun}
-								Icon={item.icon}
-								isActive={true}
-								groups={item.groups}
-							></Marker>
-						)
-					})}
-				</Map>
-			</MapKey>
+			<APILoader akay={'9ba7e2f5c979b67281c5833918d6dfa0'}>
+				<Map center={center}></Map>
+			</APILoader>
 		</div>
 	)
 }

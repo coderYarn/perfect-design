@@ -1,68 +1,108 @@
-import React ,{
-  createContext,
-  forwardRef,
-  memo,
-  useEffect,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from "react";
-import   { useMarkers } from "../Marker/Index";
-import MarkerView from "../Marker/MarkerView"
-export const MapContext = createContext<any>(null)
-interface AMapProps {
-  children: any;
+import {
+	useRef,
+	useEffect,
+	useImperativeHandle,
+	Fragment,
+	Children,
+	cloneElement,
+	isValidElement,
+	forwardRef,
+	useReducer,
+	FC,
+	PropsWithChildren
+} from 'react'
+import { useMap } from './useMap'
+import { Context, reducer, initialState } from './context'
+
+export * from './useMap'
+export * from './context'
+
+type RenderProps =
+	| {
+			children?: (data: {
+				AMap: typeof AMap
+				map: AMap.Map
+				container?: HTMLDivElement | null
+			}) => undefined
+	  }
+	| { children?: React.ReactNode }
+
+export interface MapProps extends AMap.MapEvents, AMap.MapOptions {
+	className?: React.HTMLAttributes<HTMLDivElement>['className']
+	style?: React.HTMLAttributes<HTMLDivElement>['style']
+	container?: HTMLDivElement | null
+	children?: JSX.Element & RenderProps['children']
 }
 
-function AMapC(props: AMapProps, ref: any) {
-  useImperativeHandle(ref, () => {
-    return {
-      map: map,
-      removeMarker: removeMarker,
-    };
-  });
-  const removeMarker = (group: string) => {
-    const removeList = markers.filter(
-      (marker: any) => marker.getExtData() == group
-    );
-    const list = markers.filter((marker: any) => marker.getExtData() !== group);
-    setMarkers(list);
-    map.current.remove(removeList);
-  };
-  const [AmapStore, setAmapStore] = useState<any>();
-  const [center, setConter] = useState<any>();
-  const [zoom, setZoom] = useState(0);
-  useEffect(()=>{
-    console.log(center);
-    
-  },[center])
-  const map = useRef<any>();
-
-  const container = useRef<HTMLDivElement>();
-  const [markers, setMarkers]: any = useMarkers(props.children, map.current);
-  useEffect(() => {
-    if (container.current) {
-      map.current = new AMap.Map(container.current, {
-        center: [113.397694, 22.514927],
-        resizeEnable: true,
-        mapStyle: "amap://styles/darkblue",
-        zoom: 0,
-      });
-      map.current.on("click", (e: any) => {});
-      map.current.on("zoomend", () => {
-        setConter(map.current.getCenter());
-        setZoom(map.current.getZoom());
-      });
-      setAmapStore(map.current);
-    }
-  }, [container]);
-
-  return (
-    <MapContext.Provider value={{ map: AmapStore as any }}>
-      <div className="App" ref={container as any} />
-      <MarkerView marters={markers}></MarkerView>
-    </MapContext.Provider>
-  );
+export const Provider: FC<PropsWithChildren<RenderProps>> = (props) => {
+	const [state, dispatch] = useReducer(reducer, initialState)
+	return (
+		<Context.Provider value={{ ...state, state, dispatch }}>
+			{props.children}
+		</Context.Provider>
+	)
 }
 
-export default memo(forwardRef(AMapC));
+export const Map = forwardRef<
+	MapProps & { map?: AMap.Map },
+	MapProps & RenderProps
+>(({ className, children, ...props }, ref) => {
+	const [state, dispatch] = useReducer(reducer, initialState)
+	const elmRef = useRef<HTMLDivElement>(null)
+	const { setContainer, container, map } = useMap({
+		container: props.container || (elmRef.current as MapProps['container']),
+		...props
+	})
+	useEffect(() => setContainer(elmRef.current), [elmRef.current])
+	useImperativeHandle(
+		ref,
+		() => ({
+			...props,
+			map,
+			AMap,
+			container: props.container || elmRef.current
+		}),
+		[map]
+	)
+	const childs = Children.toArray(children)
+
+	useEffect(() => {
+		if (map) {
+			dispatch({ map, container: elmRef.current, AMap })
+		}
+	}, [map])
+
+	return (
+		<Context.Provider value={{ ...state, state, dispatch }}>
+			{!props.container && (
+				<div
+					ref={elmRef}
+					className={`react-amap-wapper ${className}`}
+					style={{ fontSize: 1, width: '100%', height: '100%', ...props.style }}
+				/>
+			)}
+			{AMap &&
+				map &&
+				typeof children === 'function' &&
+				children({ AMap, map, container })}
+			{AMap &&
+				map &&
+				childs.map((child, key) => {
+					if (!isValidElement(child)) return null
+					if (typeof child === 'string') {
+						return cloneElement(<Fragment>{child}</Fragment>, { key })
+					}
+					if (child.type && typeof child.type === 'string') {
+						return cloneElement(child, { key })
+					}
+					return cloneElement(child, {
+						...child.props,
+						AMap,
+						map,
+						container,
+						key
+					})
+				})}
+		</Context.Provider>
+	)
+})

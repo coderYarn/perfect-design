@@ -23,14 +23,14 @@ export async function getRoutes() {
   return {
     routes,
     routeComponents: {
-'404': React.lazy(() => import(/* webpackChunkName: "nm__.pnpm__registry.npmmirror.com+dumi_2.1.14_pi5pgkhimjhfbcyobqmxgtpunm__node_modules__dumi__dist__client__pages__404" */'C:/Users/coderYarn/Desktop/perfect-design/node_modules/.pnpm/registry.npmmirror.com+dumi@2.1.14_pi5pgkhimjhfbcyobqmxgtpunm/node_modules/dumi/dist/client/pages/404.js')),
-'dumi-context-layout': React.lazy(() => import(/* webpackChunkName: "dumi__tmp__dumi__theme__ContextWrapper" */'C:/Users/coderYarn/Desktop/perfect-design/.dumi/tmp/dumi/theme/ContextWrapper.tsx')),
-'DocLayout': React.lazy(() => import(/* webpackChunkName: "nm__.pnpm__registry.npmmirror.com+dumi_2.1.14_pi5pgkhimjhfbcyobqmxgtpunm__node_modules__dumi__theme-default__layouts__DocLayout__index" */'C:/Users/coderYarn/Desktop/perfect-design/node_modules/.pnpm/registry.npmmirror.com+dumi@2.1.14_pi5pgkhimjhfbcyobqmxgtpunm/node_modules/dumi/theme-default/layouts/DocLayout/index.js')),
-'docs/guide': React.lazy(() => import(/* webpackChunkName: "docs__guide.md" */'C:/Users/coderYarn/Desktop/perfect-design/docs/guide.md')),
-'docs/index': React.lazy(() => import(/* webpackChunkName: "docs__index.md" */'C:/Users/coderYarn/Desktop/perfect-design/docs/index.md')),
-'components/Alert/index': React.lazy(() => import(/* webpackChunkName: "packages__perfect-map__src__components__Alert__index.md" */'C:/Users/coderYarn/Desktop/perfect-design/packages/perfect-map/src/components/Alert/index.md')),
-'components/Map/index': React.lazy(() => import(/* webpackChunkName: "packages__perfect-map__src__components__Map__index.md" */'C:/Users/coderYarn/Desktop/perfect-design/packages/perfect-map/src/components/Map/index.md')),
-'demo-render': React.lazy(() => import(/* webpackChunkName: "nm__.pnpm__registry.npmmirror.com+dumi_2.1.14_pi5pgkhimjhfbcyobqmxgtpunm__node_modules__dumi__dist__client__pages__Demo__index" */'C:/Users/coderYarn/Desktop/perfect-design/node_modules/.pnpm/registry.npmmirror.com+dumi@2.1.14_pi5pgkhimjhfbcyobqmxgtpunm/node_modules/dumi/dist/client/pages/Demo/index.js')),
+'404': React.lazy(() => import(/* webpackChunkName: "nm__.pnpm__registry.npmmirror.com+dumi_2.1.14_ufuoz4donj5eabuiultxgjdaaq__node_modules__dumi__dist__client__pages__404" */'C:/Users/coderYarn/Desktop/perfect-map/node_modules/.pnpm/registry.npmmirror.com+dumi@2.1.14_ufuoz4donj5eabuiultxgjdaaq/node_modules/dumi/dist/client/pages/404.js')),
+'dumi-context-layout': React.lazy(() => import(/* webpackChunkName: "dumi__tmp__dumi__theme__ContextWrapper" */'C:/Users/coderYarn/Desktop/perfect-map/.dumi/tmp/dumi/theme/ContextWrapper.tsx')),
+'DocLayout': React.lazy(() => import(/* webpackChunkName: "nm__.pnpm__registry.npmmirror.com+dumi_2.1.14_ufuoz4donj5eabuiultxgjdaaq__node_modules__dumi__theme-default__layouts__DocLayout__index" */'C:/Users/coderYarn/Desktop/perfect-map/node_modules/.pnpm/registry.npmmirror.com+dumi@2.1.14_ufuoz4donj5eabuiultxgjdaaq/node_modules/dumi/theme-default/layouts/DocLayout/index.js')),
+'docs/guide': React.lazy(() => import(/* webpackChunkName: "docs__guide.md" */'C:/Users/coderYarn/Desktop/perfect-map/docs/guide.md')),
+'docs/index': React.lazy(() => import(/* webpackChunkName: "docs__index.md" */'C:/Users/coderYarn/Desktop/perfect-map/docs/index.md')),
+'components/Alert/index': React.lazy(() => import(/* webpackChunkName: "packages__perfect-map__src__components__Alert__index.md" */'C:/Users/coderYarn/Desktop/perfect-map/packages/perfect-map/src/components/Alert/index.md')),
+'components/Map/index': React.lazy(() => import(/* webpackChunkName: "packages__perfect-map__src__components__Map__index.md" */'C:/Users/coderYarn/Desktop/perfect-map/packages/perfect-map/src/components/Map/index.md')),
+'demo-render': React.lazy(() => import(/* webpackChunkName: "nm__.pnpm__registry.npmmirror.com+dumi_2.1.14_ufuoz4donj5eabuiultxgjdaaq__node_modules__dumi__dist__client__pages__Demo__index" */'C:/Users/coderYarn/Desktop/perfect-map/node_modules/.pnpm/registry.npmmirror.com+dumi@2.1.14_ufuoz4donj5eabuiultxgjdaaq/node_modules/dumi/dist/client/pages/Demo/index.js')),
 },
   };
 }

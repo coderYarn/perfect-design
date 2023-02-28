@@ -38,7 +38,9 @@
     "pre-commit": "lint-staged"
   },
   "dependencies": {
+    "@pansy/react-amap": "^2.15.5",
     "@types/node": "^18.14.2",
+    "@types/react": "^18.0.28",
     "rimraf": "^4.1.2"
   }
 }
