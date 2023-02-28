@@ -3,7 +3,7 @@
 // DO NOT CHANGE IT MANUALLY!
 import React, { useEffect, useState } from 'react';
 import { ApplyPluginsType } from 'umi';
-import { renderClient, RenderClientOpts } from 'C:/Users/coderYarn/Desktop/perfect-design/node_modules/.pnpm/registry.npmmirror.com+@umijs+renderer-react@4.0.53_ef5jwxihqo6n7gxfmzogljlgcm/node_modules/@umijs/renderer-react';
+import { renderClient, RenderClientOpts } from 'C:/Users/coderYarn/Desktop/perfect-map/node_modules/.pnpm/registry.npmmirror.com+@umijs+renderer-react@4.0.53_ef5jwxihqo6n7gxfmzogljlgcm/node_modules/@umijs/renderer-react';
 import { createHistory } from './core/history';
 import { createPluginManager } from './core/plugin';
 import { getRoutes } from './core/route';
