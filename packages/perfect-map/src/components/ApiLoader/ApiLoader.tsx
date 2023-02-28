@@ -1,5 +1,5 @@
 
-
+/// <reference types="../../../../types" />
 import React, { Component, PropsWithChildren } from 'react';
 
 

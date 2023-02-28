@@ -1,7 +1,7 @@
 declare module 'react-dom'
 declare module 'react-transition-group'
 declare module 'perfectMap'
-declare const AMap
+declare var Map: MapConstructor;
 declare module '*react'
 declare module '*.svg'
 declare module '*.png'
