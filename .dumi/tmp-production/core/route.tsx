@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'development') {
 import React from 'react';
 
 export async function getRoutes() {
-  const routes = {"404":{"id":"404","path":"*","parentId":"DocLayout"},"dumi-context-layout":{"id":"dumi-context-layout","path":"/","isLayout":true},"DocLayout":{"id":"DocLayout","path":"/","parentId":"dumi-context-layout","isLayout":true},"docs/guide":{"path":"guide","id":"docs/guide","parentId":"DocLayout"},"docs/index":{"path":"","id":"docs/index","parentId":"DocLayout"},"components/Map/index":{"id":"components/Map/index","path":"components/map","parentId":"DocLayout"},"demo-render":{"id":"demo-render","path":"~demos/:id","parentId":"dumi-context-layout","prerender":false}} as const;
+  const routes = {"404":{"id":"404","path":"*","parentId":"DocLayout"},"dumi-context-layout":{"id":"dumi-context-layout","path":"/","isLayout":true},"DocLayout":{"id":"DocLayout","path":"/","parentId":"dumi-context-layout","isLayout":true},"docs/guide":{"path":"guide","id":"docs/guide","parentId":"DocLayout"},"docs/index":{"path":"","id":"docs/index","parentId":"DocLayout"},"components/ApiLoader/index":{"id":"components/ApiLoader/index","path":"components/api-loader","parentId":"DocLayout"},"components/Map/index":{"id":"components/Map/index","path":"components/map","parentId":"DocLayout"},"demo-render":{"id":"demo-render","path":"~demos/:id","parentId":"dumi-context-layout","prerender":false}} as const;
   return {
     routes,
     routeComponents: {
@@ -28,6 +28,7 @@ export async function getRoutes() {
 'DocLayout': React.lazy(() => import(/* webpackChunkName: "nm__.pnpm__registry.npmmirror.com+dumi_2.1.14_ufuoz4donj5eabuiultxgjdaaq__node_modules__dumi__theme-default__layouts__DocLayout__index" */'C:/Users/coderYarn/Desktop/perfect-map/node_modules/.pnpm/registry.npmmirror.com+dumi@2.1.14_ufuoz4donj5eabuiultxgjdaaq/node_modules/dumi/theme-default/layouts/DocLayout/index.js')),
 'docs/guide': React.lazy(() => import(/* webpackChunkName: "docs__guide.md" */'C:/Users/coderYarn/Desktop/perfect-map/docs/guide.md')),
 'docs/index': React.lazy(() => import(/* webpackChunkName: "docs__index.md" */'C:/Users/coderYarn/Desktop/perfect-map/docs/index.md')),
+'components/ApiLoader/index': React.lazy(() => import(/* webpackChunkName: "packages__perfect-map__src__components__ApiLoader__index.md" */'C:/Users/coderYarn/Desktop/perfect-map/packages/perfect-map/src/components/ApiLoader/index.md')),
 'components/Map/index': React.lazy(() => import(/* webpackChunkName: "packages__perfect-map__src__components__Map__index.md" */'C:/Users/coderYarn/Desktop/perfect-map/packages/perfect-map/src/components/Map/index.md')),
 'demo-render': React.lazy(() => import(/* webpackChunkName: "nm__.pnpm__registry.npmmirror.com+dumi_2.1.14_ufuoz4donj5eabuiultxgjdaaq__node_modules__dumi__dist__client__pages__Demo__index" */'C:/Users/coderYarn/Desktop/perfect-map/node_modules/.pnpm/registry.npmmirror.com+dumi@2.1.14_ufuoz4donj5eabuiultxgjdaaq/node_modules/dumi/dist/client/pages/Demo/index.js')),
 },
