@@ -1,7 +1,7 @@
 {
 	"extends": "../../tsconfig.json",
 	"compilerOptions": {
-		"module": "es2015",
+		"module": "ES2020",
 		"baseUrl": "./",
 		"declaration": true,
 		"paths": {
