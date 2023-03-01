@@ -9,7 +9,8 @@
     "pre-commit": "pretty-quick --staged && pnpm eslint && pnpm stylelint",
     "start": "dumi dev",
     "deploy": "rimraf node_modules/.cache/gh-pages && pnpm build:docs && gh-pages -d docs-dist",
-    "build:docs": "rimraf docs-dist && dumi build"
+    "build:docs": "rimraf docs-dist && dumi build",
+    "create":"cli create ./packages/perfect-map/src/components"
   },
   "keywords": [],
   "author": "",
@@ -38,8 +39,10 @@
     "pre-commit": "lint-staged"
   },
   "dependencies": {
+    "@perfect-map/cli": "workspace:^1.0.0",
     "@types/node": "^18.14.2",
     "@types/react": "^18.0.28",
+    "add": "^2.0.6",
     "react-use": "^17.4.0",
     "rimraf": "^4.1.2",
     "tslib": "^2.5.0"
