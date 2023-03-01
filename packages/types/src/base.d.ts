@@ -11,7 +11,7 @@ declare namespace AMap {
 
   /** 2.x.xx 版本 API，版本号用的是这个字段 */
   const version: string; 
-  
+  const DrivingPolicy :any;
   /**
    * 经纬度坐标，用来描述地图上的一个点位置, 目前高德地图使用的是 GCJ-02 坐标，如果你采集的是 WGS84 坐标，请先进行坐标转换
    */

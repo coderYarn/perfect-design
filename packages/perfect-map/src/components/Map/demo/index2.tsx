@@ -3,7 +3,7 @@ import { Map, APILoader } from 'perfectMap'
 function demo2() {
 	return (
 		<div style={{ height: '300px' }}>
-			<APILoader akay={'9ba7e2f5c979b67281c5833918d6dfa0'}  plugin="AMap.ToolBar">
+			<APILoader akay={'9ba7e2f5c979b67281c5833918d6dfa0'}  plugin="AMap.Driving">
 				<Map
 					center={[116.397428, 39.90923]}
 					mapStyle={'amap://styles/darkblue'}

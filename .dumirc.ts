@@ -38,7 +38,7 @@ export default defineConfig({
 			},
 			{
 				title: '组件',
-				link: '/components/alert'
+				link: '/components/api-loader'
 			}
 		]
 	}

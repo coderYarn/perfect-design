@@ -40,7 +40,7 @@ export default function DumiContextWrapper() {
       locales,
       loading,
       setLoading,
-      themeConfig: {"title":"Perfect Design","footer":"Copyright © 2023 | Powered by <a href=\"https://d.umijs.org\" target=\"_blank\" rel=\"noreferrer\">dumi</a>","prefersColor":{"default":"light","switch":true},"name":"Perfect D","carrier":"dumi","hd":true,"rtl":true,"nav":[{"title":"指南","link":"/guide"},{"title":"组件","link":"/components/alert"}]},
+      themeConfig: {"title":"Perfect Design","footer":"Copyright © 2023 | Powered by <a href=\"https://d.umijs.org\" target=\"_blank\" rel=\"noreferrer\">dumi</a>","prefersColor":{"default":"light","switch":true},"name":"Perfect D","carrier":"dumi","hd":true,"rtl":true,"nav":[{"title":"指南","link":"/guide"},{"title":"组件","link":"/components/api-loader"}]},
     }}>
       {outlet}
     </SiteContext.Provider>
