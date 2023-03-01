@@ -36,6 +36,7 @@ function createFile2(path, name, fileName,name2) {
 function init(path,name) {
 
 	fs.mkdir(path + '/' + name, (err) => {
+    
 		if (err) throw err // 如果出现错误就抛出错误信息
 
 		createFile2('./demo/index.md', path + '/' + name, 'index.md',name)
