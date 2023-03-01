@@ -1,4 +1,4 @@
-/// <reference types="../../../../types" />
+/// <reference types="@perfect-map/types" />
 import {
   useRef,
   useEffect,

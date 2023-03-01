@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@perfect-map/types": "workspace:^1.0.0",
     "react-amap": "^1.2.8"
   }
 }

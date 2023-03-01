@@ -12,7 +12,7 @@ if (process.env.PREVIEW !== '1') {
 export default defineConfig({
 	base,
 	publicPath,
-	title: 'Perfect Design', // 站点名称
+	title: 'PerfectMap', // 站点名称
 	outputPath: 'docs-dist', // 输出文件夹
 	resolve: {
 		docDirs: ['docs'],
@@ -26,7 +26,7 @@ export default defineConfig({
 		perfectMap: path.join(__dirname, 'packages/perfect-map/src') // 配置引入别名
 	},
 	themeConfig: {
-		name: 'Perfect D',
+		name: 'PerfectMap',
 		carrier: 'dumi', // 设备状态栏左侧的文本内容
 		hd: true,
 		rtl: true,

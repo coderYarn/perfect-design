@@ -1,4 +1,4 @@
-import { Map, Provider } from './Map'
+import { Map } from './Map'
 export * from './context'
 export * from './useMap'
 export { Provider } from './Map'

@@ -55,8 +55,10 @@ importers:
 
   packages/perfect-map:
     specifiers:
+      '@perfect-map/types': workspace:^1.0.0
       react-amap: ^1.2.8
     dependencies:
+      '@perfect-map/types': link:../types
       react-amap: registry.npmmirror.com/react-amap/1.2.8
 
 packages:
