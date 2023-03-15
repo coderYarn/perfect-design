@@ -3,8 +3,8 @@
 // DO NOT CHANGE IT MANUALLY!
 import { history } from 'dumi';
 import React, { useState, useLayoutEffect, useCallback, type ReactNode } from 'react';
-import { RawIntlProvider, createIntl, createIntlCache } from 'C:/Users/coderYarn/Desktop/perfect-map/node_modules/.pnpm/registry.npmmirror.com+react-intl@6.2.10_typescript@4.9.5/node_modules/react-intl';
-import { useIsomorphicLayoutEffect } from 'C:/Users/coderYarn/Desktop/perfect-map/node_modules/.pnpm/registry.npmmirror.com+dumi@2.1.14_ufuoz4donj5eabuiultxgjdaaq/node_modules/dumi/dist/client/theme-api/utils.js'
+import { RawIntlProvider, createIntl, createIntlCache } from 'C:/Users/EDY/Desktop/perfect-map/node_modules/.pnpm/registry.npmmirror.com+react-intl@6.2.10_typescript@4.9.5/node_modules/react-intl';
+import { useIsomorphicLayoutEffect } from 'C:/Users/EDY/Desktop/perfect-map/node_modules/.pnpm/registry.npmmirror.com+dumi@2.1.14_ufuoz4donj5eabuiultxgjdaaq/node_modules/dumi/dist/client/theme-api/utils.js'
 import { locales, messages } from './config';
 
 const cache = createIntlCache();

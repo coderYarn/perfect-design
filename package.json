@@ -10,7 +10,7 @@
     "start": "dumi dev",
     "deploy": "rimraf node_modules/.cache/gh-pages && pnpm build:docs && gh-pages -d docs-dist",
     "build:docs": "rimraf docs-dist && dumi build",
-    "create":"cli create ./packages/perfect-map/src/components"
+    "create": "cli create ./packages/perfect-map/src/components"
   },
   "keywords": [],
   "author": "",
@@ -39,6 +39,8 @@
     "pre-commit": "lint-staged"
   },
   "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "@amap/amap-jsapi-types": "^0.0.13",
     "@perfect-map/cli": "workspace:^1.0.0",
     "@types/node": "^18.14.2",
     "@types/react": "^18.0.28",

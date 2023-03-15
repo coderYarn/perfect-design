@@ -25,7 +25,6 @@ toc: content
 
 添加插件
 
-<code src="./demo/index3.tsx"></code>
 
 ## API
 

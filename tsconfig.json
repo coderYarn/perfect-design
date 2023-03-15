@@ -17,5 +17,6 @@
             "jsx": "react",
             "experimentalDecorators": true
     },
-    "exclude": ["node_modules", "lib"]
+    "exclude": ["node_modules", "lib"],
+    
 }

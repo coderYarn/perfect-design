@@ -1,3 +1,3 @@
-import { APILoader } from './ApiLoader'
+import  APILoader  from './ApiLoader'
 
 export default APILoader

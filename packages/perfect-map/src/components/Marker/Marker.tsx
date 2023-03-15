@@ -3,8 +3,8 @@
 import React from 'react';
 
 
-const CreateApp = () => {
+const Marker = () => {
   return <div></div>
 }
 
-export default CreateApp
+export default Marker
