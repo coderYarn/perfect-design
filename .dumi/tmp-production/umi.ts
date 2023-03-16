@@ -3,7 +3,7 @@
 // DO NOT CHANGE IT MANUALLY!
 import './core/polyfill';
 
-import { renderClient } from 'C:/Users/coderYarn/Desktop/perfect-map/node_modules/.pnpm/registry.npmmirror.com+@umijs+renderer-react@4.0.53_ef5jwxihqo6n7gxfmzogljlgcm/node_modules/@umijs/renderer-react';
+import { renderClient } from 'C:/Users/EDY/Desktop/perfect-map/node_modules/.pnpm/registry.npmmirror.com+@umijs+renderer-react@4.0.53_ef5jwxihqo6n7gxfmzogljlgcm/node_modules/@umijs/renderer-react';
 import { getRoutes } from './core/route';
 import { createPluginManager } from './core/plugin';
 import { createHistory } from './core/history';

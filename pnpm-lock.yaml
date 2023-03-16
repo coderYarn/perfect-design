@@ -74,6 +74,7 @@ importers:
   packages/perfect-map:
     specifiers:
       '@perfect-map/types': workspace:^1.0.0
+      '@perfect-map/utils': workspace:^1.0.0
       '@rollup/plugin-commonjs': ^23.0.4
       react-amap: ^1.2.8
       react-is: ^18.2.0
@@ -88,6 +89,7 @@ importers:
       styled-components: ^5.3.6
     dependencies:
       '@perfect-map/types': link:../types
+      '@perfect-map/utils': link:../utils
       '@rollup/plugin-commonjs': registry.npmmirror.com/@rollup/plugin-commonjs/23.0.4_rollup@3.17.3
       react-amap: registry.npmmirror.com/react-amap/1.2.8
       react-is: registry.npmmirror.com/react-is/18.2.0

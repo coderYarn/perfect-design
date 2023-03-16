@@ -1,4 +1,5 @@
 import AMapLoader from '@amap/amap-jsapi-loader'
+import { useRef, useState } from 'react'
 
 class MapObject {
 	mapStack: any
@@ -6,32 +7,28 @@ class MapObject {
 		this.mapStack = new Map()
 	}
 	create(id, params) {
-		return new Promise((resolve)=>{
-            AMapLoader.load({
-                key: params.akay,
-                version: params.version,
-                plugins: params.plugins
-            }).then((AMap) => {
-                const map = new AMap.Map(id, params)
-                this.mapStack.set(id, map)
-                resolve(this.mapStack.get(id))
-            })
-        })
+		AMapLoader.load({
+			key: params.akay,
+			version: params.version,
+			plugins: params.plugins
+		}).then((AMap) => {
+			const map = new AMap.Map(id, params)
+			this.mapStack.set(id, map)
+		})
 	}
 
-	getMap(id: string) {
-		return this.mapStack.get(id)
-	}
+
 }
-
-const useCreateMap = (function () {
-	var constance = null
-	return function Construt() {
-		if (!constance) {
-			constance = new MapObject()
-		}
-		return constance
+let map = new MapObject()
+const useCreateMap = function () {
+	// const [map, setMap] = useState()
+	const ref = useRef<any>()
+	if (ref.current) {
+		return ref.current
 	}
-})()
+	ref.current = map
+
+	return ref.current
+}
 
 export default useCreateMap
